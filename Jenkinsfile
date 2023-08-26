@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Debug') {
             steps {
-                sh 'pwd'
+                sh 'pwd && ls'
             }
         }      
     }
