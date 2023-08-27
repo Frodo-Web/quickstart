@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:latest'
-            args '-v /home/dev/Practice/Jenkins/m2-dind:/root/.m2 --network host'
+            args '-v /home/dev/Practice/Jenkins/m2-dind:/home/1000/.m2 --network host'
             reuseNode true
         }
         // label 'agent01'
