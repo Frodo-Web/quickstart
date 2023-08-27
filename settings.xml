@@ -1,10 +1,10 @@
 <settings> 
     <servers>
-        <server>
+<!--         <server>
             <id>maven-releases</id>
             <username>${repo.login}</username>
             <password>${repo.pwd}</password>
-        </server>
+        </server> -->
         <server>
             <id>maven-snapshots</id>
             <username>admin</username>
