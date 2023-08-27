@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Preparations') {
             steps {
+                sh 'echo $USER && echo $HOME'
                 sh 'cp settings.xml $HOME/.m2'
                 sh 'cd helloworld'
             }
