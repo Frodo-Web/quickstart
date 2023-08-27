@@ -119,12 +119,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-    <distributionManagement>
-        <repository>
-            <id>${repo.id}</id>
-            <url>${repo.url}</url>
-        </repository>
-    </distributionManagement>
     <build>
         <!-- Set the name of the WAR, used as the context root when the app is deployed. -->
         <finalName>${project.artifactId}</finalName>
