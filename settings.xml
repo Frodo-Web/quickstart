@@ -7,8 +7,8 @@
         </server>
         <server>
             <id>maven-snapshots</id>
-            <username>${repo.login}</username>
-            <password>${repo.pwd}</password>
+            <username>admin</username>
+            <password>test</password>
         </server>
     </servers>
 </settings>  
