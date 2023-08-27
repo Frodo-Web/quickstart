@@ -26,7 +26,7 @@ pipeline {
                     mavenSettingsConfig: '79124993-ee18-48ed-97dc-7345abef9dab'
                 ) {
                     // sh 'mvn -X -Drepo.login=admin -Drepo.pwd=test deploy'
-                    sh 'mvn -X deploy'
+                    sh 'mvn -X -DaltSnapshotDeploymentRepository=maven-snapshots::default::http://172.20.17.14:8081/repository/maven-snapshots/ deploy'
                 }
             }
         }
