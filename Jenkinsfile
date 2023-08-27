@@ -28,7 +28,6 @@ pipeline {
                     //         -DaltReleaseDeploymentRepository=maven-releases::default::http://172.20.17.14:8081/repository/releases/ \
                     //         deploy'
                     sh 'mvn deploy'
-                }
             }
         }
     }
