@@ -23,6 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                     sh 'cd helloworld'
+                    sh 'ls -alth'
                     // sh 'mvn -Drepo.id=wildflyBuilds -Drepo.login=admin -Drepo.pwd=test -Drepo.url=http://172.20.17.14:8081 deploy'
                     // sh 'mvn -X -Drepo.login=admin -Drepo.pwd=test deploy'
                     // sh 'mvn -X \
