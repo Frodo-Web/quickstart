@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Preparations') {
             steps {
-                sh 'echo $USER && echo $HOME'
                 sh 'cp settings.xml $HOME/.m2'
                 sh 'cd helloworld'
             }
@@ -22,6 +21,8 @@ pipeline {
         stage('Deploy') {
             steps {
 //                sh 'mvn -Drepo.id=wildflyBuilds -Drepo.login=admin -Drepo.pwd=test -Drepo.url=http://172.20.17.14:8081 deploy'
+                sh 'echo $USER && echo $HOME'
+                sh 'ls -la $HOME/.m2'
                 sh 'mvn -X -Drepo.login=admin -Drepo.pwd=test deploy'
             }
         }
