@@ -64,7 +64,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <linkXRef>false</linkXRef>
     </properties>
-
+    <distributionManagement>
+<!--         <repository>
+            <id>${repo.release.id}</id>
+            <url>${repo.release.url}</url>
+        </repository> -->
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://172.20.17.14:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <repositories>
         <repository>
             <id>jboss-public-maven-repository</id>
