@@ -24,7 +24,8 @@ pipeline {
                 withMaven(
                     mavenSettingsFilePath: '/home/jenkins/.m2/settings.xml'
                 ) {
-                    sh 'mvn -X -Drepo.login=admin -Drepo.pwd=test deploy'
+                    // sh 'mvn -X -Drepo.login=admin -Drepo.pwd=test deploy'
+                    sh 'mvn -X deploy'
                 }
             }
         }
