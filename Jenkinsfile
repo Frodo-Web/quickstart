@@ -15,7 +15,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd helloworld'
                 sh 'mvn clean package'
             }
         }
