@@ -1,7 +1,12 @@
-<settings>
+<settings> 
     <servers>
         <server>
-            <id>${repo.id}</id>
+            <id>maven-releases</id>
+            <username>${repo.login}</username>
+            <password>${repo.pwd}</password>
+        </server>
+        <server>
+            <id>maven-snapshots</id>
             <username>${repo.login}</username>
             <password>${repo.pwd}</password>
         </server>
