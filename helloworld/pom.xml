@@ -53,7 +53,16 @@
         <repo.snapshots.id>maven-snapshots</repo.snapshots.id>
         <repo.snapshots.url>http://172.20.17.14:8081/repository/maven-snapshots/</repo.snapshots.url> -->
     </properties>
-
+    <distributionManagement>
+<!--         <repository>
+            <id>${repo.release.id}</id>
+            <url>${repo.release.url}</url>
+        </repository> -->
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://172.20.17.14:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <repositories>
         <repository>
             <id>jboss-public-maven-repository</id>
@@ -108,16 +117,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-    <distributionManagement>
-<!--         <repository>
-            <id>${repo.release.id}</id>
-            <url>${repo.release.url}</url>
-        </repository> -->
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://172.20.17.14:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <!-- importing the ee-with-tools BOM adds specs and other useful artifacts as managed dependencies -->
