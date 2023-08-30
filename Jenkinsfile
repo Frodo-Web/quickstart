@@ -1,4 +1,3 @@
-http://172.20.17.14:8081/service/rest/v1/search/assets/download?repository=maven-snapshots&group=org.wildfly.quickstarts&name=helloworld&sort=version&direction=desc
 pipeline {
     agent {
         docker {
