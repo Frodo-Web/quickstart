@@ -11,6 +11,8 @@ pipeline {
     stages {
         stage('Preparations') {
             steps {
+                sh 'curl -s -L -o jq https://github.com/jqlang/jq/releases/download/jq-1.6/jq-linux64'
+                sh 'chmod +x jq'
                 sh 'cp settings.xml $HOME/.m2'
             }
         }
@@ -42,7 +44,7 @@ pipeline {
                       curl -S -H "content-Type: application/json" -d '{"operation":"remove", "address":[{"deployment":"helloworld.war"}]}' --digest http://frodo:test@172.20.17.13:9990/management
                     '''
                     def UPLOAD_AND_DEPLOY = '''
-                      bytes_value=`curl -F "file=@./helloworld.war" --digest http://frodo:test@172.20.17.13:9990/management/add-content | jq -r .result.BYTES_VALUE`
+                      bytes_value=`curl -F "file=@./helloworld.war" --digest http://frodo:test@172.20.17.13:9990/management/add-content | ./jq -r .result.BYTES_VALUE`
                       curl -S -H "Content-Type: application/json" \
                            -d '{"content":[{"hash": {"BYTES_VALUE" : "'${bytes_value}'"}}], "address": [{"deployment":"helloworld.war"}], "operation":"add", "enabled":"true"}' \
                            --digest http://frodo:test@172.20.17.13:9990/management
